@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Search, User, Menu, X, HelpCircle, Globe } from 'lucide-react';
+import { User, Menu, X, HelpCircle, Globe } from 'lucide-react';
 import { 
   DropdownMenu,
   DropdownMenuContent,
@@ -41,14 +41,6 @@ const Header = () => {
             <h1 className="font-bold text-2xl text-tripadvisor-primary">Helpy Here</h1>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="font-medium hover:text-tripadvisor-primary">Hotels</Link>
-            <Link to="/" className="font-medium hover:text-tripadvisor-primary">Restaurants</Link>
-            <Link to="/" className="font-medium hover:text-tripadvisor-primary">Things to Do</Link>
-            <Link to="/" className="font-medium hover:text-tripadvisor-primary">Travel Stories</Link>
-          </nav>
-
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
             {/* Language & Currency Dropdown */}
@@ -83,12 +75,6 @@ const Header = () => {
                 </div>
               </DropdownMenuContent>
             </DropdownMenu>
-
-            {/* Search Button */}
-            <Button variant="ghost" size="sm">
-              <Search className="h-5 w-5 mr-2" />
-              <span>Search</span>
-            </Button>
 
             {/* Sign In Dialog */}
             <Dialog>
@@ -170,11 +156,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-3 space-y-3">
-            <Link to="/" className="block py-2 font-medium">Hotels</Link>
-            <Link to="/" className="block py-2 font-medium">Restaurants</Link>
-            <Link to="/" className="block py-2 font-medium">Things to Do</Link>
-            <Link to="/" className="block py-2 font-medium">Travel Stories</Link>
-            <div className="pt-3 border-t">
+            <div className="pt-3">
               {/* Mobile Language & Currency */}
               <Dialog>
                 <DialogTrigger asChild>
@@ -221,12 +203,6 @@ const Header = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-
-              {/* Mobile Search */}
-              <Button variant="ghost" className="w-full justify-start mt-2" size="sm">
-                <Search className="h-5 w-5 mr-2" />
-                <span>Search</span>
-              </Button>
 
               {/* Mobile Sign In */}
               <Dialog>
