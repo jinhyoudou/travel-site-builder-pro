@@ -115,10 +115,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-              Discover the world's best places
+              Discover the city's best places
             </h1>
             <p className="text-lg md:text-xl mb-8 animate-slide-up">
-              Find the best hotels, restaurants, and things to do, based on traveler reviews
+              Find the best foods and spots in the city
             </p>
           </div>
           <SearchBar />
