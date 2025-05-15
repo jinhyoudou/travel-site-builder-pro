@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Search, User, Menu, X } from 'lucide-react';
+import { Search, User, Menu, X, HelpCircle } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +13,8 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <h1 className="font-bold text-2xl text-tripadvisor-primary">TripGuide</h1>
+            <HelpCircle className="h-6 w-6 text-tripadvisor-blue mr-2" />
+            <h1 className="font-bold text-2xl text-tripadvisor-primary">Helpy Here</h1>
           </Link>
 
           {/* Desktop Navigation */}
